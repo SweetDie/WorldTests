@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="6.3.0" />
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.16">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="SimpleCrypto" Version="0.3.30.26" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WorldTests.BLL\WorldTests.BLL.csproj" />
+    <ProjectReference Include="..\WorldTests.DAL\WorldTests.DAL.csproj" />
+    <ProjectReference Include="..\WorldTests.Primitive\WorldTests.Primitive.csproj" />
+  </ItemGroup>
+
+</Project>

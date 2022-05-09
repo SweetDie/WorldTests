@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="WorldTests.Client.Resources.Controls.TestView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WorldTests.Client.Resources.Controls"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="320" d:DesignWidth="220">
+    <Grid Margin="10" MouseDown="button_Click">
+        <materialDesign:Card Background="LightGray"
+            Width="200">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition
+                        Height="140" />
+                    <RowDefinition
+                        Height="*" />
+                    <RowDefinition
+                        Height="Auto" />
+                </Grid.RowDefinitions>
+                <Image
+                    Height="140"
+                    Width="196"
+                    Stretch="Fill"
+                    Source="../../Images/noImage.webp"/>
+                <StackPanel
+                    Grid.Row="1"
+                    Margin="8 24 8 0">
+                    <TextBlock Foreground="{StaticResource TitleColor}"
+                               FontWeight="Bold">
+                        Test name
+                    </TextBlock>
+                    <TextBlock x:Name="textName" Foreground="{StaticResource AnswerColor}"
+                        TextWrapping="Wrap"
+                        VerticalAlignment="Center"/>
+                    <TextBlock Margin="0, 10, 0 ,0" Foreground="{StaticResource TitleColor}"
+                        FontWeight="Bold">
+                        Questions count
+                    </TextBlock>
+                    <TextBlock x:Name="questionsCount" Foreground="{StaticResource AnswerColor}"
+                               TextWrapping="Wrap"
+                               VerticalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </materialDesign:Card>
+    </Grid>
+</UserControl>
